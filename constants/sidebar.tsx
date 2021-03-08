@@ -8,15 +8,15 @@ const sidebarMenuItems = [
     href: '/admin/createDelivery',
   },
   {
-    title: 'riders',
-    href: '/admin/riders',
-  },
-  {
     title: 'bikes',
     href: '/admin/bikes',
   },
   {
-    title: 'deliveries',
+    title: 'riders',
+    href: '/admin/riders',
+  },
+  {
+    title: 'Total deliveries',
     href: '/admin/deliveries',
   },
 ]

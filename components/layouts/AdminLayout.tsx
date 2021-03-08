@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Dashboard', 'Reports', 'Support'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -35,7 +35,7 @@ export default function AdminLayout({ children }) {
 
   return (
     <>
-      <Box bg={'gray.100'} px={4}>
+      <Box bg={'black'} px={4} color='white'>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -77,11 +77,12 @@ export default function AdminLayout({ children }) {
                   }
                 />
               </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
+              <MenuList bg='black'>
+                {/* // TODO: Pass the hover effect as a group */}
+                <MenuItem _hover={{ bg: 'white', color: 'black'}}>My Account</MenuItem>
+                <MenuItem _hover={{ bg: 'white', color: 'black'}}>Settings</MenuItem>
                 <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
+                <MenuItem _hover={{ bg: 'white', color: 'black'}}>Log out</MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -98,7 +99,7 @@ export default function AdminLayout({ children }) {
         ) : null}
       </Box>
 
-      <Box p={4}>{children}</Box>
+      <Flex p={6}>{children}</Flex>
     </>
   );
 }

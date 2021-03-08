@@ -13,7 +13,7 @@ import {
   IconProps,
   useColorModeValue,
 } from '@chakra-ui/react';
-import logistics from '../assets/img/logistics.svg'
+import logistics from '../../assets/img/logistics.svg'
 
 export default function CallToActionWithVideo() {
   return (
