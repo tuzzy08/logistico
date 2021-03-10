@@ -26,10 +26,15 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import NavBarIcon from '../NavBarIcon'
+import { useForm } from 'react-hook-form'
+import useAuth from '../../../hooks/useAuth'
+
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const { signInWithGoogle } = useAuth()
+  const { handleSubmit } = useForm()
+  const onSubmit = () => signInWithGoogle()
   return (
     <Box>
       <Flex
@@ -55,21 +60,24 @@ export default function WithSubnavigation() {
             <DesktopNav />
           </Flex>
         </Flex>
-
+        <form onSubmit={handleSubmit(onSubmit)}>
         <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button
+            {/* <form onSubmit={handleSubmit(onSubmit)}> */}
+          {/* <Button
+            type='submit'
             as={'a'}
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
             href={'#'}>
             Sign In
-          </Button>
+          </Button> */}
           <Button
+            type='submit'
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
@@ -79,9 +87,11 @@ export default function WithSubnavigation() {
             _hover={{
               bg: 'pink.300',
             }}>
-            Sign Up
+            Sign In
           </Button>
+          {/* </form> */}
         </Stack>
+        </form>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
