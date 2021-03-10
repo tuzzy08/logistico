@@ -4,6 +4,8 @@ This is a simple logistics management application built with [Next.js](https://n
 
 This demonstrates a serverless architecture with nextjs API routes.
 
-## Demo
 
+#### Authentication - Firebase
+
+## Demo
 Live [link on Netlify](https://hardcore-almeida-b9efd7.netlify.app/)
