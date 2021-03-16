@@ -1,24 +1,26 @@
+import { FaHome, FaMailBulk, FaBiking, FaTruckMoving } from 'react-icons/fa'
+
 const sidebarMenuItems = [
   {    
-    title: 'home',
-    href: '/admin',    
+    title: 'Home',
+    href: '/admin',
+    icon: FaHome,
   },
   {
-    title: 'new delivery',
-    href: '/admin/createDelivery',
+    title: 'New Package',
+    href: '/admin/createPackage',
+    icon: FaMailBulk,
   },
   {
-    title: 'bikes',
+    title: 'My Bikes',
     href: '/admin/bikes',
+    icon: FaBiking,
   },
   {
-    title: 'riders',
-    href: '/admin/riders',
-  },
-  {
-    title: 'Total deliveries',
-    href: '/admin/deliveries',
-  },
+    title: 'My Vans',
+    href: '/admin/vans',
+    icon: FaTruckMoving,
+  },    
 ]
 
 export default sidebarMenuItems

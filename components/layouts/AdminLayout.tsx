@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Reports', 'Support'];
+const Links = ['Dashboard', 'Packages', 'Reports', 'Support'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -58,7 +58,9 @@ export default function AdminLayout({ children }) {
           <Flex alignItems={'center'}>
             <Button
               variant={'solid'}
-              colorScheme={'teal'}
+              bg='#e6cb2d'
+              color='black'
+              // colorScheme={'#e6cb2d'}
               size={'sm'}
               mr={4}
               leftIcon={<AddIcon />}>

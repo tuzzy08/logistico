@@ -12,34 +12,49 @@ function useAuth() {
   const router = useRouter()
   // Sign In with Google
   const signInWithGoogle = async () => {
-    await firebase.auth().signInWithRedirect(provider)
-    return firebase.auth()
-      .getRedirectResult()
-      .then((result) => {
-        console.log(result)
-        // const token = await firebase.auth.currentUser.getIdToken(true)
+  //  firebase.auth().signInWithRedirect(provider)
+  //   if (typeof window !== 'undefined') {
+  //       router.push('/admin')
+  //     }
+    
 
-        /** @type {firebase.auth.OAuthCredential} */
-        // const credential = result.credential;
+  firebase.auth()
+  .signInWithPopup(provider)
+  .then(async (result) => {
+    // console.log(result)
+    const { displayName, email, emailVerified, photoURL } = result.user;
+    const { data } = await axios({
+      method: 'post',
+      url: 'http://localhost:3000/api/getToken',
+      data: { displayName, email, emailVerified, photoURL },
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    // console.log(data)
+    if (typeof window !== 'undefined') {
+      router.push('/admin')
+    }
+    /** @type {firebase.auth.OAuthCredential} */
+    // const credential = result.credential;
 
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        // const token = credential.accessToken;
-        // The signed-in user info.
-        // const user = result.user;
-        // ...
-      }).catch((error) => {
-        // Handle Errors here.
-        console.log(error)
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        const credential = error.credential;
-        // ...
-      });
-  }
-
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    // const token = credential.accessToken;
+    // The signed-in user info.
+    
+    // ...
+  }).catch((error) => {
+    console.log(error)
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    const credential = error.credential;
+    // ...
+  });
+    }
   /**
    *  Sign out Function
    */
@@ -47,7 +62,7 @@ function useAuth() {
     return await firebase.auth().signOut()
       .then(() => {        
         if (typeof window !== 'undefined') {
-          router.push('/auth/login')
+          router.push('/auth/signin')
         }
       })
   }
