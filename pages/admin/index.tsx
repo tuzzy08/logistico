@@ -6,10 +6,10 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 import firebase from '../../config/firebase'
 import verifyToken from '../../utils/verifyToken'
 
-export default function Index() {
+export default function Index({ photoURL, displayName, signedIn}) {
   return(
     <>
-      <Layout>
+      <Layout photoURL={photoURL} displayName={displayName}>
         <Sidebar />
       </Layout>
     </>
@@ -27,11 +27,17 @@ const fetcher = async () => {
   })
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context) {  
   const { access_token } = nookies.get(context)
-  const result = verifyToken(access_token)
-  console.log(result)
+  if(!access_token) {
+    return {
+      redirect: {
+        destination: '/',
+      },
+    }
+  }
+  const { photoURL, displayName } = verifyToken(access_token)
   return {
-    props: {}, // will be passed to the page component as props
+    props: {photoURL, displayName }, // will be passed to the page component as props
   }
 }

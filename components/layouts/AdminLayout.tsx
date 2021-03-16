@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import useAuth from '../../hooks/useAuth'
 import {
   Box,
   Flex,
@@ -30,8 +31,9 @@ const NavLink = ({ children }: { children: ReactNode }) => (
   </Link>
 );
 
-export default function AdminLayout({ children }) {
+export default function AdminLayout({ children, photoURL, displayName }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { signOut } = useAuth()
 
   return (
     <>
@@ -63,8 +65,8 @@ export default function AdminLayout({ children }) {
               // colorScheme={'#e6cb2d'}
               size={'sm'}
               mr={4}
-              leftIcon={<AddIcon />}>
-              Action
+              >
+              {displayName}
             </Button>
             <Menu>
               <MenuButton
@@ -74,9 +76,7 @@ export default function AdminLayout({ children }) {
                 cursor={'pointer'}>
                 <Avatar
                   size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
+                  src={ photoURL }
                 />
               </MenuButton>
               <MenuList bg='black'>
@@ -84,7 +84,7 @@ export default function AdminLayout({ children }) {
                 <MenuItem _hover={{ bg: 'white', color: 'black'}}>My Account</MenuItem>
                 <MenuItem _hover={{ bg: 'white', color: 'black'}}>Settings</MenuItem>
                 <MenuDivider />
-                <MenuItem _hover={{ bg: 'white', color: 'black'}}>Log out</MenuItem>
+                <MenuItem _hover={{ bg: 'white', color: 'black'}} onClick={() => signOut()} >Log out</MenuItem>
               </MenuList>
             </Menu>
           </Flex>

@@ -10,18 +10,12 @@ function useAuth() {
   const provider = new firebase.auth.GoogleAuthProvider()
   firebase.auth().useDeviceLanguage()
   const router = useRouter()
+
   // Sign In with Google
   const signInWithGoogle = async () => {
-  //  firebase.auth().signInWithRedirect(provider)
-  //   if (typeof window !== 'undefined') {
-  //       router.push('/admin')
-  //     }
-    
-
   firebase.auth()
   .signInWithPopup(provider)
   .then(async (result) => {
-    // console.log(result)
     const { displayName, email, emailVerified, photoURL } = result.user;
     const { data } = await axios({
       method: 'post',
@@ -31,7 +25,6 @@ function useAuth() {
         'Content-Type': 'application/json',
       },
     })
-    // console.log(data)
     if (typeof window !== 'undefined') {
       router.push('/admin')
     }
@@ -44,7 +37,6 @@ function useAuth() {
     
     // ...
   }).catch((error) => {
-    console.log(error)
     // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -60,9 +52,16 @@ function useAuth() {
    */
   const signOut = async () => {
     return await firebase.auth().signOut()
-      .then(() => {        
+      .then(async () => {
+        const {data} = await axios({
+          method: 'get',
+          url: 'http://localhost:3000/api/signOut',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
         if (typeof window !== 'undefined') {
-          router.push('/auth/signin')
+          router.push('/')
         }
       })
   }

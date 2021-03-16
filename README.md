@@ -8,4 +8,4 @@ This demonstrates a serverless architecture with nextjs API routes.
 #### Authentication - Firebase
 
 ## Demo
-Live [link on Netlify](https://hardcore-almeida-b9efd7.netlify.app/)
+Live [on Netlify](https://hardcore-almeida-b9efd7.netlify.app/)
