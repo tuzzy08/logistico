@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import jwt from 'jsonwebtoken'
 import Cors from 'cors'
-import initMiddleware from '../../utils/initMiddleware'
-import setTokenAsCookie from '../../utils/setTokenAsCookie'
+import initMiddleware from '../../utils/api/initMiddleware'
+import setTokenAsCookie from '../../utils/api/setTokenAsCookie'
+import createToken from '../../utils/api/createToken'
 
 export default async function getToken(req: NextApiRequest, res: NextApiResponse) {
 
@@ -31,17 +32,13 @@ const cors = await initMiddleware(
         }
         /* JWT secret key */
         const KEY = process.env.JWT_SECRET_KEY
-        const token = jwt.sign(
-          payload,
-          KEY,
-          {
-            expiresIn: 3600,
-          },)
-        // set cookie expiration
-        const expiresIn = 3600
+        /* JWT options */
+        const options = { expiresIn: 3600, }
+        /* Generate token */
+        const token = createToken(payload, KEY, options)
         // TODO: Ensure to change cookie secure option to 'true' in production
         // Set cookie policy for session cookie.
-        const cookieOptions = { maxAge: expiresIn, httpOnly: true, secure: false, path: '/'}
+        const cookieOptions = { maxAge: options.expiresIn, httpOnly: true, secure: false, path: '/'}
         setTokenAsCookie(token, res, 'access_token', cookieOptions)
         res.status(200).json({
           message: 'API call succesful',

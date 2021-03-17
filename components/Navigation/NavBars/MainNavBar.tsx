@@ -1,7 +1,3 @@
-// export default function MainNavBar(params:any) {
-  
-// }
-
 import {
   Box,
   Flex,
@@ -27,6 +23,7 @@ import {
 } from '@chakra-ui/icons';
 import NavBarIcon from '../NavBarIcon'
 import { useForm } from 'react-hook-form'
+import { FaGoogle } from 'react-icons/fa'
 import useAuth from '../../../hooks/useAuth'
 
 
@@ -87,7 +84,8 @@ export default function WithSubnavigation() {
             _hover={{
               bg: 'pink.300',
             }}>
-            Sign In
+            Sign in with
+            <Icon as={FaGoogle} mx='5px'></Icon>
           </Button>
           {/* </form> */}
         </Stack>

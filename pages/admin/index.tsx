@@ -3,14 +3,19 @@ import axios from 'axios'
 import nookies from 'nookies'
 import Layout from '../../components/layouts/AdminLayout'
 import Sidebar from '../../components/Sidebar/Sidebar'
+import Card from '../../components/Card';
 import firebase from '../../config/firebase'
-import verifyToken from '../../utils/verifyToken'
+import verifyToken from '../../utils/api/verifyToken'
+import { Flex, HStack } from '@chakra-ui/react'
 
 export default function Index({ photoURL, displayName, signedIn}) {
   return(
     <>
       <Layout photoURL={photoURL} displayName={displayName}>
+        <HStack spacing='15px'>
         <Sidebar />
+        <Card/>
+        </HStack>        
       </Layout>
     </>
   )

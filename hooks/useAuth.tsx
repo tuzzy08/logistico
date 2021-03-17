@@ -28,14 +28,6 @@ function useAuth() {
     if (typeof window !== 'undefined') {
       router.push('/admin')
     }
-    /** @type {firebase.auth.OAuthCredential} */
-    // const credential = result.credential;
-
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    // const token = credential.accessToken;
-    // The signed-in user info.
-    
-    // ...
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
