@@ -30,14 +30,14 @@ export default function DeliveriesTable() {
         <Tr>
           <Td>
             {/* <Flex spacing='25px'> */}
-              <Text>Item Description here</Text>              
+              <Text>Food Items</Text>              
             {/* </Flex> */}
           </Td>
           <Td>
-            <Text>Item Recipient</Text>              
+            <Text>Janeth Williams</Text>              
           </Td>
           <Td>
-            <Flex justify='space-between'><Avatar src='' bg='teal.500' size='xs' /><Text>Rider Name</Text></Flex>
+            <Flex justify='space-between'><Avatar src='' bg='teal.500' size='xs' /><Text>Andy Yellow</Text></Flex>
           </Td>
           <Td>            
             <Badge ml="1" colorScheme="green">Delivered</Badge>
@@ -46,19 +46,35 @@ export default function DeliveriesTable() {
         <Tr>
           <Td>
             {/* <Flex spacing='25px'> */}
-              <Text>Item Description here</Text>              
+              <Text>Laundry items</Text>              
             {/* </Flex> */}
           </Td>
           <Td>
-            <Text>Item Recipient</Text>              
+            <Text>Samuel Jack</Text>              
           </Td>
           <Td>
-            <Flex justify='space-between'><Avatar src='' bg='teal.500' size='xs' /><Text>Rider Name</Text></Flex>
+            <Flex justify='space-between'><Avatar src='' bg='teal.500' size='xs' /><Text>Frank Edward</Text></Flex>
           </Td>
           <Td>            
             <Badge ml="1" colorScheme="yellow">In transit</Badge>
           </Td>
-        </Tr> 
+        </Tr>
+        <Tr>
+          <Td>
+            {/* <Flex spacing='25px'> */}
+              <Text>Documents</Text>              
+            {/* </Flex> */}
+          </Td>
+          <Td>
+            <Text>Red star express</Text>              
+          </Td>
+          <Td>
+            <Flex justify='space-between'><Avatar src='' bg='teal.500' size='xs' /><Text>Daniel Frank</Text></Flex>
+          </Td>
+          <Td>            
+            <Badge ml="1" colorScheme="green">Delivered</Badge>
+          </Td>
+        </Tr>
       </Tbody>
       <Tfoot>
         {/* <Tr>
