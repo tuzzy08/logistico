@@ -3,10 +3,8 @@ import MainLayout from '../components/layouts/MainLayout'
 import Hero from '../components/Hero/Hero'
 import Features from '../components/Features/Features'
 import { Divider } from "@chakra-ui/react"
-import firebase from '../config/firebase'
 import {
   Box,
-  
 } from '@chakra-ui/react'
 
 export default function Home() {
@@ -21,8 +19,7 @@ export default function Home() {
   )
 }
 
-export async function getStaticProps(context) {
- 
+export async function getStaticProps(context) { 
   return {
     props: {}
   }

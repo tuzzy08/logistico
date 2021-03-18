@@ -7,14 +7,16 @@ import Card from '../../components/Card';
 import firebase from '../../config/firebase'
 import verifyToken from '../../utils/api/verifyToken'
 import { Flex, HStack } from '@chakra-ui/react'
+import DeliveriesTable from '../../components/DeliveryTable/Table'
 
 export default function Index({ photoURL, displayName, signedIn}) {
   return(
     <>
       <Layout photoURL={photoURL} displayName={displayName}>
-        <HStack spacing='15px'>
+        <HStack spacing='40px'>
         <Sidebar />
-        <Card/>
+        <DeliveriesTable />
+        {/* <Card/> */}
         </HStack>        
       </Layout>
     </>
