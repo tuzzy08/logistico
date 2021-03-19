@@ -13,7 +13,7 @@ export default function Sidebar() {
         display={{sm: 'none', md: 'flex'}} >
         {menuItems && menuItems.map((item, index) => {
           return (
-              <SidebarMenuLinks title={item.title} href={item.href} key={index} icon={item.icon} />
+            <SidebarMenuLinks title={item.title} href={item.href} key={index} icon={item.icon} />
           )
         })}
       </Flex>
