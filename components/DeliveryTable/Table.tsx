@@ -19,7 +19,7 @@ import {
 export default function DeliveriesTable() {
   return (
     <>
-      <Box ml={{ md: '200px', }}  maxW='900px'>
+      <Box ml={{ md: '200px', }}  maxW='900px' borderWidth='1px' boxShadow='sm'>
         <Table variant="simple">
         <TableCaption placement='top'><Text fontWeight='bold' fontSize='x-large'>Latest Deliveries</Text></TableCaption>
         <Thead>
@@ -27,6 +27,7 @@ export default function DeliveriesTable() {
             <Th><Text fontWeight="bold">Item Description</Text></Th>
             <Th><Text fontWeight="bold">Recipient</Text></Th>
             <Th><Text fontWeight="bold">Assigned to</Text></Th>
+            <Th><Text fontWeight="bold">Delivery address</Text></Th>
             <Th><Text fontWeight="bold">status</Text></Th>
           </Tr>
         </Thead>
@@ -46,6 +47,9 @@ export default function DeliveriesTable() {
             <Td>            
               <Badge ml="1" colorScheme="green">Delivered</Badge>
             </Td>
+            <Td>            
+              <Text>4 street road</Text>
+            </Td>
           </Tr>
           <Tr>
             <Td>
@@ -62,6 +66,9 @@ export default function DeliveriesTable() {
             <Td>            
               <Badge ml="1" colorScheme="yellow">In transit</Badge>
             </Td>
+            <Td>            
+              <Text>4 street road</Text>
+            </Td>
           </Tr>
           <Tr>
             <Td>
@@ -77,6 +84,9 @@ export default function DeliveriesTable() {
             </Td>
             <Td>            
               <Badge ml="1" colorScheme="green">Delivered</Badge>
+            </Td>
+            <Td>            
+              <Text>4 street road</Text>
             </Td>
           </Tr>
         </Tbody>
