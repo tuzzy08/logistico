@@ -13,11 +13,13 @@ export default function Index({ photoURL, displayName, signedIn}) {
   return(
     <>
       <Layout photoURL={photoURL} displayName={displayName}>
-        <HStack spacing='40px'>
+        {/* <HStack spacing='40px'> */}
+        <Flex w='100%' align='flex-start'>
         <Sidebar />
         <DeliveriesTable />
         {/* <Card/> */}
-        </HStack>        
+        {/* </HStack>         */}
+        </Flex>
       </Layout>
     </>
   )

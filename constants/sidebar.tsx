@@ -8,7 +8,7 @@ const sidebarMenuItems = [
   },
   {
     title: 'New Package',
-    href: '/admin/CreatePackage',
+    href: '/admin/createPackage',
     icon: FaMailBulk,
   },
   {
