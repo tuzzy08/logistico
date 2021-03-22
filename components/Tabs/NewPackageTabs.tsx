@@ -3,7 +3,7 @@ import { Center, Box, Tabs, TabList, TabPanels, Tab, TabPanel, Text} from '@chak
 export default function NewPackageTabs() {
   return (
     <>
-      <Box ml={{ md: '200px', }} borderWidth='1px' w='500px' mt='50px' boxShadow="md" p="6" rounded="md">
+      <Box ml={{ md: '200px', }} borderWidth='1px' w='600px' mt='50px' boxShadow="md" p="6" rounded="md">
         <Center><Text>Create new package</Text></Center>
         <Box mt='20px'>
           <Tabs variant="enclosed">

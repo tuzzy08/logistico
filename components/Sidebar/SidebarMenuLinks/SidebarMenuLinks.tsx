@@ -28,7 +28,11 @@ export default function SubMenuLink({title, href, icon}) {
             color: '#e6cb2d',
             textDecoration: 'none',
             bg: 'black',
-          }}>
+          }}
+          _focus={{
+            outline: 'none'
+          }}
+          >
             <Icon as={icon} mx='5px' my='4px' />
             {/* <Flex w='15px' h='27px'ml='7px'></Flex> */}
           {title}
