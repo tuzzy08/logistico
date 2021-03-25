@@ -1,13 +1,13 @@
 import useSWR from 'swr'
 import axios from 'axios'
 import nookies from 'nookies'
-import Layout from '../../components/layouts/AdminLayout'
-import Sidebar from '../../components/Sidebar/Sidebar'
+import Layout from '../../components/layouts/adminLayout/AdminLayout'
+import Sidebar from '../../components/Sidebar'
 import Card from '../../components/Card';
 import firebase from '../../config/firebase'
 import verifyToken from '../../utils/api/verifyToken'
 import { Flex, HStack } from '@chakra-ui/react'
-import DeliveriesTable from '../../components/DeliveryTable/Table'
+import DeliveriesTable from '../../components/DeliveryTable/index'
 
 export default function Index({ photoURL, displayName, signedIn}) {
   return(

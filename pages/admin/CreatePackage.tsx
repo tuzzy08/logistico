@@ -1,7 +1,7 @@
 import { Flex, Stack, Box, } from '@chakra-ui/react'
-import NewPackageTabs from '../../components/Tabs/NewPackageTabs'
-import AdminLayout from '../../components/layouts/AdminLayout'
-import Sidebar from '../../components/Sidebar/Sidebar'
+import NewPackageTabs from '../../components/Tabs'
+import AdminLayout from '../../components/layouts/adminLayout/AdminLayout'
+import Sidebar from '../../components/Sidebar'
 
 
 export default function CreatePackage() {

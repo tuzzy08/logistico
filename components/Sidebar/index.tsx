@@ -1,6 +1,6 @@
 import { Flex, Box } from "@chakra-ui/react";
 import menuItems from '../../constants/sidebar'
-import SidebarMenuLinks from './SidebarMenuLinks/SidebarMenuLinks'
+import SidebarMenuLinks from './SidebarMenuLinks'
 
 export default function Sidebar() {
   return (
