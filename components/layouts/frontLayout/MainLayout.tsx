@@ -1,4 +1,4 @@
-import MainNavBar from "../../Navigation/NavBars/MainNavBar"
+import MainNavBar from '../../Navigation/NavBars/MainNavBar'
 import Footer from '../../Footer'
 
 export default function MainLayout({ children }) {
