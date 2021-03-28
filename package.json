@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run lint && npm run test && next dev",
+    "lint": "eslint --fix --ignore-path .gitignore .",
     "build": "next build",
-    "start": "next start",
-    "test": "jest"
+    "start": "npm run lint && npm run test && next start",
+    "test": "jest --watchAll"
   },
   "env": {
     "jest": true
@@ -36,6 +37,7 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@emotion/jest": "^11.2.1",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.21",
     "@types/node": "^14.14.31",

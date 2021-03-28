@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import NextLink from 'next/link'
 import { Link, Icon } from '@chakra-ui/react'
 
@@ -21,7 +22,7 @@ export default function SubMenuLink({ title, href, icon }: Props) {
       <Link
         px={4}
         py={3}
-        rounded={"sm"}
+        rounded="sm"
         textAlign="justify"
         fontFamily="body"
         fontSize="md"
@@ -29,12 +30,12 @@ export default function SubMenuLink({ title, href, icon }: Props) {
         textTransform="capitalize"
         color="black"
         _hover={{
-          color: "#e6cb2d",
-          textDecoration: "none",
-          bg: "black",
+          color: '#e6cb2d',
+          textDecoration: 'none',
+          bg: 'black',
         }}
         _focus={{
-          outline: "none",
+          outline: 'none',
         }}
       >
         <Icon as={icon} mx="5px" my="4px" />
@@ -43,5 +44,5 @@ export default function SubMenuLink({ title, href, icon }: Props) {
       </Link>
     </NextLink>
     // </Flex>
-  );
+  )
 }

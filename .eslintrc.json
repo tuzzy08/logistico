@@ -24,9 +24,15 @@
   "rules": {
     "prettier/prettier": [
       "error",
-      { "endOfLine": "auto", "singleQuote": true }
+      {
+        "endOfLine": "auto",
+        "singleQuote": true,
+        "semi": false,
+        "trailingComma": "all"
+      }
     ],
-    "react/jsx-filename-extension": [1, { "allow": "as-needed" }],
+    "react/jsx-filename-extension": [0, { "allow": "always" }],
+    "react/react-in-jsx-scope": "off",
     // This key solves the "Missing file extension ts" error
     "import/extensions": [
       "error",
