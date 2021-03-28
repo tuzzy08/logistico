@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Hero component Should render correctly 1`] = `
+.emotion-0 {
+  max-width: 7xl;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1>*:not(style)~*:not(style) base {
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+}
+
+.emotion-1>*:not(style)~*:not(style) base marginTop {
+  base: 8px;
+  md: 10px;
+}
+
+.emotion-1>*:not(style)~*:not(style) md {
+  margin-top: 0;
+}
+
+.emotion-1>*:not(style)~*:not(style) md marginStart {
+  base: 8px;
+  md: 10px;
+}
+
+.emotion-1 flexDirection {
+  base: column;
+  md: row;
+}
+
+.emotion-1 py {
+  base: 20px;
+  md: 28px;
+}
+
+.emotion-2>*:not(style)~*:not(style) {
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+}
+
+.emotion-2>*:not(style)~*:not(style) marginTop {
+  base: 5px;
+  md: 10px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-3 {
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.emotion-3 fontSize {
+  base: 3xl;
+  sm: 4xl;
+  lg: 6xl;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-4::after {
+  content: '';
+  width: full;
+  height: 30%;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  background: red.400;
+  z-index: -1;
+}
+
+.emotion-5 {
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+.emotion-5 fontSize {
+  base: 3xl;
+  sm: 4xl;
+  lg: 6xl;
+}
+
+.emotion-6 {
+  color: red.400;
+}
+
+.emotion-7 {
+  color: gray.500;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8>*:not(style)~*:not(style) base {
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+}
+
+.emotion-8>*:not(style)~*:not(style) base marginTop {
+  base: 4px;
+  sm: 6px;
+}
+
+.emotion-8>*:not(style)~*:not(style) sm {
+  margin-top: 0;
+}
+
+.emotion-8>*:not(style)~*:not(style) sm marginStart {
+  base: 4px;
+  sm: 6px;
+}
+
+.emotion-8 flexDirection {
+  base: column;
+  sm: row;
+}
+
+.emotion-9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
+  border-radius: full;
+  font-weight: normal;
+  padding-left: 6px;
+  padding-right: 6px;
+  background: red.400;
+}
+
+.emotion-9:hover,
+.emotion-9[data-hover] {
+  background: red.500;
+}
+
+.emotion-10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
+  border-radius: full;
+  font-weight: normal;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.emotion-11 {
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.emotion-12 {
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: gray.300;
+  vertical-align: middle;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  width: full;
+}
+
+.emotion-14 {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+<div>
+  <div
+    class="chakra-container emotion-0"
+  >
+    <div
+      class="chakra-stack emotion-1"
+    >
+      <div
+        class="chakra-stack emotion-2"
+      >
+        <h2
+          class="chakra-heading emotion-3"
+        >
+          <span
+            class="chakra-text emotion-4"
+          >
+            LOGISTICO
+          </span>
+          <br />
+        </h2>
+        <h2
+          class="chakra-heading emotion-5"
+        >
+          <span
+            class="chakra-text emotion-6"
+          >
+            Your reliable logistics partner
+          </span>
+        </h2>
+        <p
+          class="chakra-text emotion-7"
+        >
+          Logistico is a rich platform that lets you create and manage every aspect of your logistics. We provide premium, efficient and reliable pickup and delivery services.
+        </p>
+        <div
+          class="chakra-stack emotion-8"
+        >
+          <button
+            class="chakra-button emotion-9"
+            href="/createDelivery"
+            type="button"
+          >
+            Schedule delivery
+          </button>
+          <button
+            class="chakra-button emotion-10"
+            type="button"
+          >
+            <span
+              class="chakra-button__icon emotion-11"
+            >
+              <svg
+                aria-hidden="true"
+                class="chakra-icon emotion-12"
+                focusable="false"
+                viewBox="0 0 58 58"
+              >
+                <path
+                  d="M28.9999 0.562988C13.3196 0.562988 0.562378 13.3202 0.562378 29.0005C0.562378 44.6808 13.3196 57.438 28.9999 57.438C44.6801 57.438 57.4374 44.6808 57.4374 29.0005C57.4374 13.3202 44.6801 0.562988 28.9999 0.562988ZM39.2223 30.272L23.5749 39.7247C23.3506 39.8591 23.0946 39.9314 22.8332 39.9342C22.5717 39.9369 22.3142 39.8701 22.0871 39.7406C21.86 39.611 21.6715 39.4234 21.5408 39.1969C21.4102 38.9705 21.3421 38.7133 21.3436 38.4519V19.5491C21.3421 19.2877 21.4102 19.0305 21.5408 18.8041C21.6715 18.5776 21.86 18.3899 22.0871 18.2604C22.3142 18.1308 22.5717 18.064 22.8332 18.0668C23.0946 18.0696 23.3506 18.1419 23.5749 18.2763L39.2223 27.729C39.4404 27.8619 39.6207 28.0486 39.7458 28.2713C39.8709 28.494 39.9366 28.7451 39.9366 29.0005C39.9366 29.2559 39.8709 29.507 39.7458 29.7297C39.6207 29.9523 39.4404 30.1391 39.2223 30.272Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            How It Works
+          </button>
+        </div>
+      </div>
+      <div
+        class="emotion-13"
+      >
+        <img
+          alt="Hero Image"
+          class="chakra-image__placeholder emotion-14"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

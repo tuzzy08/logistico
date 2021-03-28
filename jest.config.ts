@@ -78,7 +78,10 @@ export default {
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'node'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '\\.svg$': '<rootDir>/__mocks__/svgMock.js',
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -169,6 +172,8 @@ export default {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
+    // This npm package helps resolve svg imports in tests
+    '^.+\\.svg$': 'jest-svg-transformer',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

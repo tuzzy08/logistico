@@ -33,11 +33,17 @@ const NavLink = ({ children }: { children: ReactNode }) => (
   </Link>
 )
 
+interface Props {
+  children: any
+  photoURL: string
+  displayName: string
+}
+
 export default function AdminLayout({
   children,
   photoURL,
   displayName,
-}) {
+}: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { signOut } = useAuth()
 

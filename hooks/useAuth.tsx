@@ -1,8 +1,7 @@
-import { useState, useEffect, createContext, useContext } from 'react'
+// import { useState, useEffect, createContext, useContext } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import firebase from '../config/firebase'
-
 
 // custom hook that manages login and logout
 function useAuth() {
@@ -13,39 +12,50 @@ function useAuth() {
 
   // Sign In with Google
   const signInWithGoogle = async () => {
-  firebase.auth()
-  .signInWithPopup(provider)
-  .then(async (result) => {
-    const { displayName, email, emailVerified, photoURL } = result.user;
-    const { data } = await axios({
-      method: 'post',
-      url: 'http://localhost:3000/api/getToken',
-      data: { displayName, email, emailVerified, photoURL },
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-    if (typeof window !== 'undefined') {
-      router.push('/admin')
-    }
-  }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    const credential = error.credential;
-    // ...
-  });
-    }
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then(async (result) => {
+        const {
+          displayName,
+          email,
+          emailVerified,
+          photoURL,
+        } = result.user
+        await axios({
+          method: 'post',
+          url: 'http://localhost:3000/api/getToken',
+          data: { displayName, email, emailVerified, photoURL },
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        if (typeof window !== 'undefined') {
+          router.push('/admin')
+        }
+      })
+      .catch((error) => {
+        // TODO: Handle this error
+        // Handle Errors here.
+        // const errorCode = error.code
+        // const errorMessage = error.message
+        // The email of the user's account used.
+        // const email = error.email
+        // The firebase.auth.AuthCredential type that was used.
+        // const credential = error.credential
+        // ...
+        console.error(error)
+      })
+  }
   /**
    *  Sign out Function
    */
-  const signOut = async () => {
-    return await firebase.auth().signOut()
+  const signOut = async () =>
+    firebase
+      .auth()
+      .signOut()
       .then(async () => {
-        const {data} = await axios({
+        await axios({
           method: 'get',
           url: 'http://localhost:3000/api/signOut',
           headers: {
@@ -56,7 +66,6 @@ function useAuth() {
           router.push('/')
         }
       })
-  }
-  return { signInWithGoogle, signOut, }
+  return { signInWithGoogle, signOut }
 }
 export default useAuth
