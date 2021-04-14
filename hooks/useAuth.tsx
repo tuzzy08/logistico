@@ -11,11 +11,12 @@ function useAuth() {
   const router = useRouter()
 
   // Sign In with Google
-  const signInWithGoogle = async () => {
+  const signInWithGoogle = () => {
     firebase
       .auth()
       .signInWithPopup(provider)
       .then(async (result) => {
+        console.log(result.user.displayName)
         const {
           displayName,
           email,
