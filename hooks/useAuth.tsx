@@ -1,7 +1,7 @@
 // import { useState, useEffect, createContext, useContext } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
-import firebase from '../config/firebase'
+import { firebase } from '../config/firebase'
 
 // custom hook that manages login and logout
 function useAuth() {

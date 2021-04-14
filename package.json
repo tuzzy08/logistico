@@ -6,8 +6,8 @@
     "dev": "npm run lint && npm run test && next dev",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "build": "next build",
-    "start": "npm run lint && npm run test && next start",
-    "test": "jest -u"
+    "start": "next start",
+    "test": "npm run lint && jest -u"
   },
   "env": {
     "jest": true
