@@ -45,16 +45,6 @@ exports[`Testing Hero component Should render correctly 1`] = `
   md: 28px;
 }
 
-.emotion-2>*:not(style)~*:not(style) {
-  -webkit-margin-start: 0;
-  margin-inline-start: 0;
-}
-
-.emotion-2>*:not(style)~*:not(style) marginTop {
-  base: 5px;
-  md: 10px;
-}
-
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -66,6 +56,16 @@ exports[`Testing Hero component Should render correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.emotion-2>*:not(style)~*:not(style) {
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+}
+
+.emotion-2>*:not(style)~*:not(style) marginTop {
+  base: 5px;
+  md: 10px;
 }
 
 .emotion-3 {
@@ -301,7 +301,6 @@ exports[`Testing Hero component Should render correctly 1`] = `
         >
           <button
             class="chakra-button emotion-9"
-            href="/createDelivery"
             type="button"
           >
             Schedule delivery
