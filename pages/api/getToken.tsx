@@ -48,7 +48,7 @@ export default async function getToken(
         }
         setTokenAsCookie(token, res, 'accessToken', cookieOptions)
         res.status(200).json({
-          message: 'API call succesful',
+          message: 'API call succesfull',
           status: 'success',
           token,
         })

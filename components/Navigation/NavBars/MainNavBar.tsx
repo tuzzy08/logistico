@@ -23,7 +23,6 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
-import { useForm } from 'react-hook-form'
 import { FaGoogle } from 'react-icons/fa'
 import NavBarIcon from '../NavBarIcon'
 import useAuth from '../../../hooks/useAuth'
@@ -227,10 +226,9 @@ const MobileNav = () => (
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
   const { signInWithGoogle } = useAuth()
-  const { handleSubmit } = useForm()
-  const onSubmit = () => signInWithGoogle()
   return (
-    <Box>
+    // Creates a sticky navigation bar
+    <Box position="sticky" top="0" zIndex="sticky">
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -262,40 +260,28 @@ export default function WithSubnavigation() {
             <DesktopNav />
           </Flex>
         </Flex>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Stack
-            flex={{ base: 1, md: 0 }}
-            justify="flex-end"
-            direction="row"
-            spacing={6}
+        <Stack
+          flex={{ base: 1, md: 0 }}
+          justify="flex-end"
+          direction="row"
+          spacing={6}
+        >
+          <Button
+            type="submit"
+            display={{ base: 'none', md: 'inline-flex' }}
+            fontSize="sm"
+            fontWeight={600}
+            color="white"
+            bg="#f56565"
+            _hover={{
+              bg: 'pink.300',
+            }}
+            onClick={signInWithGoogle}
           >
-            {/* <form onSubmit={handleSubmit(onSubmit)}> */}
-            {/* <Button
-            type='submit'
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Sign In
-          </Button> */}
-            <Button
-              type="submit"
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize="sm"
-              fontWeight={600}
-              color="white"
-              bg="#f56565"
-              _hover={{
-                bg: 'pink.300',
-              }}
-            >
-              Sign in with
-              <Icon as={FaGoogle} mx="5px" />
-            </Button>
-            {/* </form> */}
-          </Stack>
-        </form>
+            Sign in with
+            <Icon as={FaGoogle} mx="5px" />
+          </Button>
+        </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
