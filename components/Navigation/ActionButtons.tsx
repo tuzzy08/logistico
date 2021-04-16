@@ -8,7 +8,8 @@ export default function ActionButtons() {
       flex={{ base: 1, md: 0 }}
       justify="flex-end"
       direction="row"
-      spacing={6}
+      spacing={4}
+      mr="1.5"
     >
       <ColorModeSwitcher justifySelf="flex-end" />
       <Button
