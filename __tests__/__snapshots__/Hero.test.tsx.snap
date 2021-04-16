@@ -90,7 +90,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   position: absolute;
   bottom: 1px;
   left: 0;
-  background: red.400;
+  background: yellow.300;
   z-index: -1;
 }
 
@@ -106,147 +106,36 @@ exports[`Testing Hero component Should render correctly 1`] = `
 }
 
 .emotion-6 {
-  color: red.400;
+  color: yellow.300;
 }
 
-.emotion-7 {
-  color: gray.500;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background: gray.50;
-  border-radius: xl;
-}
-
-.emotion-9>*:not(style)~*:not(style) {
-  -webkit-margin-start: 0;
-  margin-inline-start: 0;
-}
-
-.emotion-9>*:not(style)~*:not(style) marginTop {
-  base: 8px;
-}
-
-.emotion-9 p {
-  base: 4px;
-  sm: 6px;
-  md: 8px;
-}
-
-.emotion-9 maxW {
-  lg: lg;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-10>*:not(style)~*:not(style) {
-  margin-top: 4px;
-  -webkit-margin-start: 0;
-  margin-inline-start: 0;
-}
-
-.emotion-11 {
-  color: gray.800;
-  line-height: 1.1;
-}
-
-.emotion-11 fontSize {
-  base: 2xl;
-  sm: 3xl;
-  md: 4xl;
-}
-
-.emotion-12 {
-  background-image: linear-gradient(to right, red.400, pink.400);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.emotion-13 {
-  color: gray.500;
-}
-
-.emotion-13 fontSize {
-  base: sm;
-  sm: md;
-}
-
-.emotion-14 {
+.emotion-8 {
   margin-top: 10px;
 }
 
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-15>*:not(style)~*:not(style) {
-  margin-top: 0.5rem;
-  -webkit-margin-start: 0;
-  margin-inline-start: 0;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-18 {
-  outline: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-20 {
+.emotion-9 {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
 }
 
-.emotion-21 {
-  outline: 0;
+.emotion-10 {
+  padding-right: 2rem;
 }
 
-.emotion-23 {
+.emotion-10:focus,
+.emotion-10[data-focus] {
+  z-index: unset;
+}
+
+.emotion-11 {
+  position: absolute;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -255,61 +144,46 @@ exports[`Testing Hero component Should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  white-space: nowrap;
-  vertical-align: middle;
-  outline: none;
-  width: full;
-  font-family: heading;
-  margin-top: 8px;
-  background-image: linear-gradient(to right, red.400, pink.400);
-  color: white;
+  pointer-events: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.emotion-23:hover,
-.emotion-23[data-hover] {
-  background-image: linear-gradient(to right, red.400, pink.400);
-  box-shadow: xl;
-}
-
-.emotion-24 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-24>*:not(style)~*:not(style) base {
+.emotion-12>*:not(style)~*:not(style) base {
   -webkit-margin-start: 0;
   margin-inline-start: 0;
 }
 
-.emotion-24>*:not(style)~*:not(style) base marginTop {
+.emotion-12>*:not(style)~*:not(style) base marginTop {
   base: 4px;
   sm: 6px;
 }
 
-.emotion-24>*:not(style)~*:not(style) sm {
+.emotion-12>*:not(style)~*:not(style) sm {
   margin-top: 0;
 }
 
-.emotion-24>*:not(style)~*:not(style) sm marginStart {
+.emotion-12>*:not(style)~*:not(style) sm marginStart {
   base: 4px;
   sm: 6px;
 }
 
-.emotion-24 flexDirection {
+.emotion-12 flexDirection {
   base: column;
   sm: row;
 }
 
-.emotion-25 {
+.emotion-13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -344,12 +218,12 @@ exports[`Testing Hero component Should render correctly 1`] = `
   background: red.400;
 }
 
-.emotion-25:hover,
-.emotion-25[data-hover] {
+.emotion-13:hover,
+.emotion-13[data-hover] {
   background: red.500;
 }
 
-.emotion-26 {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -383,12 +257,12 @@ exports[`Testing Hero component Should render correctly 1`] = `
   padding-right: 6px;
 }
 
-.emotion-27 {
+.emotion-15 {
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 
-.emotion-28 {
+.emotion-16 {
   width: 4px;
   height: 4px;
   display: inline-block;
@@ -400,7 +274,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   vertical-align: middle;
 }
 
-.emotion-29 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -420,7 +294,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   width: full;
 }
 
-.emotion-30 {
+.emotion-18 {
   width: 100%;
   height: 150%;
   display: inline-block;
@@ -437,7 +311,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   z-index: -1;
 }
 
-.emotion-31 {
+.emotion-19 {
   position: relative;
   height: 400px;
   border-radius: 2xl;
@@ -446,7 +320,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   overflow: hidden;
 }
 
-.emotion-32 {
+.emotion-20 {
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -482,130 +356,78 @@ exports[`Testing Hero component Should render correctly 1`] = `
             Your reliable logistics partner
           </span>
         </h2>
-        <p
-          class="chakra-text emotion-7"
-        >
-          Logistico is a rich platform that lets you create and manage every aspect of your logistics. We provide premium, efficient and reliable pickup and delivery services.
-        </p>
         <div
-          class="chakra-container emotion-8"
+          class="chakra-container emotion-7"
         >
-          <div
-            class="chakra-stack emotion-9"
+          <form
+            class="emotion-8"
           >
             <div
-              class="chakra-stack emotion-10"
+              class="chakra-select__wrapper emotion-9"
             >
-              <h2
-                class="chakra-heading emotion-11"
+              <select
+                class="chakra-select emotion-10"
               >
-                Join our team
-                <span
-                  class="chakra-text emotion-12"
+                <option
+                  value=""
                 >
-                  !
-                </span>
-              </h2>
-              <p
-                class="chakra-text emotion-13"
-              >
-                We’re looking for amazing engineers just like you! Become a part of our rockstar engineering team and skyrocket your career!
-              </p>
-            </div>
-            <form
-              class="emotion-14"
-            >
+                  Select drop-off location
+                </option>
+                <option
+                  value="option1"
+                >
+                  Option 1
+                </option>
+                <option
+                  value="option2"
+                >
+                  Option 2
+                </option>
+                <option
+                  value="option3"
+                >
+                  Option 3
+                </option>
+              </select>
               <div
-                class="chakra-stack emotion-15"
+                class="chakra-select__icon-wrapper emotion-11"
               >
-                <div
-                  class="chakra-tabs emotion-8"
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
                 >
-                  <div
-                    aria-orientation="horizontal"
-                    class="chakra-tabs__tablist emotion-17"
-                    role="tablist"
-                  >
-                    <button
-                      aria-controls="tabs-1--tabpanel-0"
-                      aria-selected="true"
-                      class="chakra-tabs__tab emotion-18"
-                      id="tabs-1--tab-0"
-                      role="tab"
-                      tabindex="0"
-                      type="button"
-                    >
-                      Tab 1
-                    </button>
-                    <button
-                      aria-controls="tabs-1--tabpanel-1"
-                      aria-selected="false"
-                      class="chakra-tabs__tab emotion-18"
-                      id="tabs-1--tab-1"
-                      role="tab"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      Tab 2
-                    </button>
-                  </div>
-                  <div
-                    class="chakra-tabs__tab-panels emotion-20"
-                  >
-                    <div
-                      aria-labelledby="tabs-1--tab-0"
-                      class="chakra-tabs__tab-panel emotion-21"
-                      id="tabs-1--tabpanel-0"
-                      role="tabpanel"
-                      tabindex="0"
-                    >
-                      <p>
-                        one!
-                      </p>
-                    </div>
-                    <div
-                      aria-labelledby="tabs-1--tab-1"
-                      class="chakra-tabs__tab-panel emotion-21"
-                      hidden=""
-                      id="tabs-1--tabpanel-1"
-                      role="tabpanel"
-                      tabindex="0"
-                    >
-                      <p>
-                        two!
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
               </div>
-              <button
-                class="chakra-button emotion-23"
-                type="button"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
         <div
-          class="chakra-stack emotion-24"
+          class="chakra-stack emotion-12"
         >
           <button
-            class="chakra-button emotion-25"
+            class="chakra-button emotion-13"
             type="button"
           >
             Book delivery
           </button>
           <button
-            class="chakra-button emotion-26"
+            class="chakra-button emotion-14"
             type="button"
           >
             <span
-              class="chakra-button__icon emotion-27"
+              class="chakra-button__icon emotion-15"
             >
               <svg
                 aria-hidden="true"
-                class="chakra-icon emotion-28"
+                class="chakra-icon emotion-16"
                 focusable="false"
                 viewBox="0 0 58 58"
               >
@@ -620,10 +442,10 @@ exports[`Testing Hero component Should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="emotion-29"
+        class="emotion-17"
       >
         <svg
-          class="chakra-icon emotion-30"
+          class="chakra-icon emotion-18"
           focusable="false"
           viewBox="0 0 578 440"
           xmlns="http://www.w3.org/2000/svg"
@@ -636,11 +458,11 @@ exports[`Testing Hero component Should render correctly 1`] = `
           />
         </svg>
         <div
-          class="emotion-31"
+          class="emotion-19"
         >
           <img
             alt="Hero Image"
-            class="chakra-image__placeholder emotion-32"
+            class="chakra-image__placeholder emotion-20"
           />
         </div>
       </div>

@@ -274,10 +274,10 @@ export default function WithSubnavigation() {
             fontSize="sm"
             variant="outline"
             fontWeight={600}
-            borderColor="#f56565"
+            borderColor="green.400"
             // color="white"
             _hover={{
-              bg: '#f56565',
+              bg: 'green.300',
               color: 'white',
             }}
             // onClick={signInWithGoogle}
@@ -291,10 +291,7 @@ export default function WithSubnavigation() {
             fontSize="sm"
             fontWeight={600}
             color="white"
-            bg="#f56565"
-            _hover={{
-              bg: 'pink.300',
-            }}
+            bg="green.400"
             // onClick={signInWithGoogle}
           >
             Sign in with

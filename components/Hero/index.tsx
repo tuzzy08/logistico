@@ -52,7 +52,7 @@ export default function CallToActionWithVideo() {
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                bg: 'red.400',
+                bg: 'green.400',
                 zIndex: -1,
               }}
             >
@@ -65,7 +65,7 @@ export default function CallToActionWithVideo() {
             fontWeight={300}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
           >
-            <Text as="span" color="red.400">
+            <Text as="span" color="green.300">
               Your reliable logistics partner
             </Text>
           </Heading>
@@ -84,10 +84,15 @@ export default function CallToActionWithVideo() {
               size="lg"
               fontWeight="normal"
               px={6}
-              colorScheme="red"
-              bg="red.400"
-              _hover={{ bg: 'red.500' }}
-              whileHover={{ scale: 1.2 }}
+              color="white"
+              // colorScheme="red"
+              bg="green.300"
+              _hover={{
+                borderColor: 'green',
+              }}
+              whileHover={{
+                scale: 1.2,
+              }}
               onClick={(e) => {
                 e.preventDefault()
                 if (typeof window !== 'undefined') {
