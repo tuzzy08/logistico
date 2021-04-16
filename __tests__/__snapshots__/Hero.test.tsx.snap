@@ -90,7 +90,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   position: absolute;
   bottom: 1px;
   left: 0;
-  background: yellow.300;
+  background: green.400;
   z-index: -1;
 }
 
@@ -106,7 +106,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
 }
 
 .emotion-6 {
-  color: yellow.300;
+  color: green.300;
 }
 
 .emotion-8 {
@@ -215,12 +215,13 @@ exports[`Testing Hero component Should render correctly 1`] = `
   font-weight: normal;
   padding-left: 6px;
   padding-right: 6px;
-  background: red.400;
+  color: white;
+  background: green.300;
 }
 
 .emotion-13:hover,
 .emotion-13[data-hover] {
-  background: red.500;
+  border-color: green;
 }
 
 .emotion-14 {
