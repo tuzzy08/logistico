@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable no-use-before-define */
 import {
   Container,
   Stack,
@@ -9,9 +11,12 @@ import {
   Icon,
   createIcon,
   IconProps,
+  useColorModeValue,
 } from '@chakra-ui/react'
 // import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { MotionBox, MotionButton } from '../Motion'
+import DispatchForm from '../Forms/CreateDispatch'
 import logistics from '../../assets/img/logistics.svg'
 
 const PlayIcon = createIcon({
@@ -64,16 +69,17 @@ export default function CallToActionWithVideo() {
               Your reliable logistics partner
             </Text>
           </Heading>
-          <Text color="gray.500">
+          {/* <Text color="gray.500">
             Logistico is a rich platform that lets you create and
             manage every aspect of your logistics. We provide premium,
             efficient and reliable pickup and delivery services.
-          </Text>
+          </Text> */}
+          <DispatchForm />
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: 'column', sm: 'row' }}
           >
-            <Button
+            <MotionButton
               rounded="full"
               size="lg"
               fontWeight="normal"
@@ -81,6 +87,7 @@ export default function CallToActionWithVideo() {
               colorScheme="red"
               bg="red.400"
               _hover={{ bg: 'red.500' }}
+              whileHover={{ scale: 1.2 }}
               onClick={(e) => {
                 e.preventDefault()
                 if (typeof window !== 'undefined') {
@@ -88,8 +95,8 @@ export default function CallToActionWithVideo() {
                 }
               }}
             >
-              Schedule delivery
-            </Button>
+              Book delivery
+            </MotionButton>
             <Button
               rounded="full"
               size="lg"
@@ -108,7 +115,7 @@ export default function CallToActionWithVideo() {
           position="relative"
           w="full"
         >
-          {/* <Blob
+          <Blob
             w={'150%'}
             h={'150%'}
             position={'absolute'}
@@ -116,23 +123,26 @@ export default function CallToActionWithVideo() {
             left={0}
             zIndex={-1}
             color={useColorModeValue('red.50', 'red.400')}
-          /> */}
-          {/* <Box
+          />
+          <MotionBox
             position={'relative'}
             height={'400px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             width={'full'}
-            overflow={'hidden'}>             */}
-          <Image
-            alt="Hero Image"
-            fit="cover"
-            align="center"
-            w="100%"
-            h="100%"
-            src={logistics}
-          />
-          {/* </Box> */}
+            overflow={'hidden'}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image
+              alt="Hero Image"
+              fit="cover"
+              align="center"
+              w="100%"
+              h="100%"
+              src={logistics}
+            />
+          </MotionBox>
         </Flex>
       </Stack>
     </Container>

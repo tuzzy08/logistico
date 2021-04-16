@@ -24,8 +24,9 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 import { FaGoogle } from 'react-icons/fa'
+import { ColorModeSwitcher } from '../../ColorModeSwitcher'
 import NavBarIcon from '../NavBarIcon'
-import useAuth from '../../../hooks/useAuth'
+// import useAuth from '../../../hooks/useAuth'
 
 interface NavItem {
   label: string
@@ -225,7 +226,7 @@ const MobileNav = () => (
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
-  const { signInWithGoogle } = useAuth()
+  // const { signInWithGoogle } = useAuth()
   return (
     // Creates a sticky navigation bar
     <Box position="sticky" top="0" zIndex="sticky">
@@ -266,6 +267,24 @@ export default function WithSubnavigation() {
           direction="row"
           spacing={6}
         >
+          <ColorModeSwitcher justifySelf="flex-end" />
+          <Button
+            type="submit"
+            display={{ base: 'none', md: 'inline-flex' }}
+            fontSize="sm"
+            variant="outline"
+            fontWeight={600}
+            borderColor="#f56565"
+            // color="white"
+            _hover={{
+              bg: '#f56565',
+              color: 'white',
+            }}
+            // onClick={signInWithGoogle}
+          >
+            Create account
+            {/* <Icon as={FaGoogle} mx="5px" /> */}
+          </Button>
           <Button
             type="submit"
             display={{ base: 'none', md: 'inline-flex' }}
@@ -276,7 +295,7 @@ export default function WithSubnavigation() {
             _hover={{
               bg: 'pink.300',
             }}
-            onClick={signInWithGoogle}
+            // onClick={signInWithGoogle}
           >
             Sign in with
             <Icon as={FaGoogle} mx="5px" />
