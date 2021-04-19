@@ -1,10 +1,11 @@
+import { useState } from 'react'
 import {
-  Box,
-  // Stack,
-  Select,
+  // Box,
+  Stack,
+  // Select,
   // Heading,
   // Text,
-  Container,
+  // Container,
   // Input,
   // Button,
   // Tabs,
@@ -13,11 +14,45 @@ import {
   // Tab,
   // TabPanel,
 } from '@chakra-ui/react'
+import { CUIAutoComplete } from 'chakra-ui-autocomplete'
 
-export default function CreateDispatchForm() {
+interface Item {
+  label: string
+  value: string
+}
+
+const areas = [
+  { value: 'dLine', label: 'DLine' },
+  { value: 'trans-amadi', label: 'Trans-Amadi' },
+  { value: 'ogbum-nu-abali', label: 'Ogbum-nu-abali' },
+  { value: 'peter-odili', label: 'Peter Odili' },
+  { value: 'new-g-r-a', label: 'New G.R.A' },
+  { value: 'old-g-r-a', label: 'Old G.R.A' },
+  { value: 'stadium-road', label: 'Stadium Road' },
+]
+
+export default function DispatchForm() {
+  const [selectedItems, setSelectedItems] = useState<Item[]>([])
+  // eslint-disable-next-line no-shadow
+  const handleSelectedItemsChange = (selectedItems?: Item[]) => {
+    if (selectedItems) {
+      setSelectedItems(selectedItems)
+    }
+  }
   return (
     <>
-      <Container>
+      <Stack>
+        <CUIAutoComplete
+          label="Choose drop-off locations"
+          placeholder="Type an area"
+          items={areas}
+          selectedItems={selectedItems}
+          onSelectedItemsChange={(changes) =>
+            handleSelectedItemsChange(changes.selectedItems)
+          }
+        />
+      </Stack>
+      {/* <Container>
         <Box as="form" mt={10}>
           <Select
             variant="filled"
@@ -27,8 +62,8 @@ export default function CreateDispatchForm() {
             <option value="option2">Option 2</option>
             <option value="option3">Option 3</option>
           </Select>
-        </Box>
-        {/* <Stack
+        </Box> */}
+      {/* <Stack
           bg="gray.50"
           rounded="xl"
           p={{ base: 4, sm: 6, md: 8 }}
@@ -61,7 +96,7 @@ export default function CreateDispatchForm() {
           </Stack>
           form
         </Stack> */}
-      </Container>
+      {/* </Container> */}
     </>
   )
 }

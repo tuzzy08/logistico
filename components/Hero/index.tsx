@@ -16,7 +16,7 @@ import {
 // import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { MotionBox, MotionButton } from '../Motion'
-import DispatchForm from '../Forms/CreateDispatch'
+import DispatchForm from '../Forms/DispatchForm'
 import logistics from '../../assets/img/logistics.svg'
 
 const PlayIcon = createIcon({
