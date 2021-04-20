@@ -56,6 +56,7 @@ export default function requestDispatch() {
               </TabList>
               <TabPanels>
                 <TabPanel>
+                  {/* Sender Details */}
                   <Box as="form" paddingTop="20px">
                     <Stack spacing={4}>
                       <Input
@@ -151,7 +152,7 @@ export default function requestDispatch() {
                       <Button
                         color="white"
                         bgGradient="linear(to-r, red.400,pink.400)"
-                        w="sm"
+                        // w="sm"
                         onClick={handleNextButtonClick}
                         _hover={{
                           bgGradient:
@@ -165,6 +166,7 @@ export default function requestDispatch() {
                   </Box>
                 </TabPanel>
                 <TabPanel>
+                  {/* Receiver Details */}
                   <Box as="form" paddingTop="20px">
                     <Stack spacing={4}>
                       <Input
@@ -199,7 +201,7 @@ export default function requestDispatch() {
                       <Button
                         color="white"
                         bgGradient="linear(to-r, red.400,pink.400)"
-                        w="sm"
+                        // w="sm"
                         // onClick={handleNextButtonClick}
                         _hover={{
                           bgGradient:

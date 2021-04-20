@@ -113,6 +113,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   box-shadow: md;
   border-width: 1px;
   border-radius: md;
+  padding: 5px;
 }
 
 .emotion-8 {
