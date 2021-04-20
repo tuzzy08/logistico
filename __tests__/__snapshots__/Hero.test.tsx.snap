@@ -109,33 +109,78 @@ exports[`Testing Hero component Should render correctly 1`] = `
   color: green.300;
 }
 
-.emotion-8 {
-  margin-top: 10px;
+.emotion-7 {
+  box-shadow: md;
+  border-width: 1px;
+  border-radius: md;
 }
 
-.emotion-9 {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-8>*:not(style)~*:not(style) {
+  margin-top: 0.5rem;
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 .emotion-10 {
-  padding-right: 2rem;
-}
-
-.emotion-10:focus,
-.emotion-10[data-focus] {
-  z-index: unset;
+  display: block;
+  text-align: start;
 }
 
 .emotion-11 {
-  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-11>*:not(style)~*:not(style) {
+  -webkit-margin-start: 2px;
+  margin-inline-start: 2px;
+  margin-top: 0;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-12>*:not(style)~*:not(style) {
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+  margin-top: 0;
+}
+
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -144,46 +189,75 @@ exports[`Testing Hero component Should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  pointer-events: none;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
 }
 
-.emotion-12 {
+.emotion-15 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: currentColor;
+  vertical-align: middle;
+}
+
+.emotion-16 {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.emotion-17 {
+  list-style-type: none;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 6px 5px 8px rgba(0,50,30,0.02);
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-12>*:not(style)~*:not(style) base {
+.emotion-18>*:not(style)~*:not(style) base {
   -webkit-margin-start: 0;
   margin-inline-start: 0;
 }
 
-.emotion-12>*:not(style)~*:not(style) base marginTop {
+.emotion-18>*:not(style)~*:not(style) base marginTop {
   base: 4px;
   sm: 6px;
 }
 
-.emotion-12>*:not(style)~*:not(style) sm {
+.emotion-18>*:not(style)~*:not(style) sm {
   margin-top: 0;
 }
 
-.emotion-12>*:not(style)~*:not(style) sm marginStart {
+.emotion-18>*:not(style)~*:not(style) sm marginStart {
   base: 4px;
   sm: 6px;
 }
 
-.emotion-12 flexDirection {
+.emotion-18 flexDirection {
   base: column;
   sm: row;
 }
 
-.emotion-13 {
+.emotion-19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -219,12 +293,12 @@ exports[`Testing Hero component Should render correctly 1`] = `
   background: green.300;
 }
 
-.emotion-13:hover,
-.emotion-13[data-hover] {
+.emotion-19:hover,
+.emotion-19[data-hover] {
   border-color: green;
 }
 
-.emotion-14 {
+.emotion-20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -258,12 +332,12 @@ exports[`Testing Hero component Should render correctly 1`] = `
   padding-right: 6px;
 }
 
-.emotion-15 {
+.emotion-21 {
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 
-.emotion-16 {
+.emotion-22 {
   width: 4px;
   height: 4px;
   display: inline-block;
@@ -275,7 +349,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   vertical-align: middle;
 }
 
-.emotion-17 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -295,7 +369,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   width: full;
 }
 
-.emotion-18 {
+.emotion-24 {
   width: 100%;
   height: 150%;
   display: inline-block;
@@ -312,7 +386,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   z-index: -1;
 }
 
-.emotion-19 {
+.emotion-25 {
   position: relative;
   height: 400px;
   border-radius: 2xl;
@@ -321,7 +395,7 @@ exports[`Testing Hero component Should render correctly 1`] = `
   overflow: hidden;
 }
 
-.emotion-20 {
+.emotion-26 {
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -358,77 +432,92 @@ exports[`Testing Hero component Should render correctly 1`] = `
           </span>
         </h2>
         <div
-          class="chakra-container emotion-7"
+          class="emotion-7"
         >
-          <form
-            class="emotion-8"
+          <div
+            class="chakra-stack emotion-8"
           >
             <div
-              class="chakra-select__wrapper emotion-9"
+              class="chakra-stack emotion-8"
             >
-              <select
-                class="chakra-select emotion-10"
+              <label
+                class="chakra-form__label emotion-10"
+                for="downshift-0-input"
+                id="downshift-0-label"
               >
-                <option
-                  value=""
-                >
-                  Select drop-off location
-                </option>
-                <option
-                  value="option1"
-                >
-                  Option 1
-                </option>
-                <option
-                  value="option2"
-                >
-                  Option 2
-                </option>
-                <option
-                  value="option3"
-                >
-                  Option 3
-                </option>
-              </select>
+                Choose drop-off locations
+              </label>
               <div
-                class="chakra-select__icon-wrapper emotion-11"
+                class="chakra-stack emotion-11"
+              />
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="downshift-0-menu"
+                class="chakra-stack emotion-12"
+                role="combobox"
               >
-                <svg
-                  aria-hidden="true"
-                  class="chakra-select__icon"
-                  focusable="false"
-                  role="presentation"
-                  style="width: 1em; height: 1em; color: currentColor;"
-                  viewBox="0 0 24 24"
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="downshift-0-menu"
+                  aria-labelledby="downshift-0-label"
+                  autocomplete="off"
+                  class="chakra-input emotion-13"
+                  id="downshift-0-input"
+                  placeholder="Type an area"
+                  value=""
+                />
+                <button
+                  aria-label="toggle menu"
+                  class="chakra-button emotion-14"
+                  id="downshift-0-toggle-button"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    class="chakra-icon emotion-15"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="emotion-16"
+              >
+                <ul
+                  aria-labelledby="downshift-0-label"
+                  class="emotion-17"
+                  id="downshift-0-menu"
+                  role="listbox"
+                />
               </div>
             </div>
-          </form>
+          </div>
         </div>
         <div
-          class="chakra-stack emotion-12"
+          class="chakra-stack emotion-18"
         >
           <button
-            class="chakra-button emotion-13"
+            class="chakra-button emotion-19"
             type="button"
           >
             Book delivery
           </button>
           <button
-            class="chakra-button emotion-14"
+            class="chakra-button emotion-20"
             type="button"
           >
             <span
-              class="chakra-button__icon emotion-15"
+              class="chakra-button__icon emotion-21"
             >
               <svg
                 aria-hidden="true"
-                class="chakra-icon emotion-16"
+                class="chakra-icon emotion-22"
                 focusable="false"
                 viewBox="0 0 58 58"
               >
@@ -443,10 +532,10 @@ exports[`Testing Hero component Should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="emotion-17"
+        class="emotion-23"
       >
         <svg
-          class="chakra-icon emotion-18"
+          class="chakra-icon emotion-24"
           focusable="false"
           viewBox="0 0 578 440"
           xmlns="http://www.w3.org/2000/svg"
@@ -459,11 +548,11 @@ exports[`Testing Hero component Should render correctly 1`] = `
           />
         </svg>
         <div
-          class="emotion-19"
+          class="emotion-25"
         >
           <img
             alt="Hero Image"
-            class="chakra-image__placeholder emotion-20"
+            class="chakra-image__placeholder emotion-26"
           />
         </div>
       </div>

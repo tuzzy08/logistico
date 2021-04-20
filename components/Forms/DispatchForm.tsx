@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  // Box,
+  Box,
   Stack,
   // Select,
   // Heading,
@@ -41,17 +41,19 @@ export default function DispatchForm() {
   }
   return (
     <>
-      <Stack>
-        <CUIAutoComplete
-          label="Choose drop-off locations"
-          placeholder="Type an area"
-          items={areas}
-          selectedItems={selectedItems}
-          onSelectedItemsChange={(changes) =>
-            handleSelectedItemsChange(changes.selectedItems)
-          }
-        />
-      </Stack>
+      <Box shadow="md" borderWidth="1px" borderRadius="md" p={5}>
+        <Stack>
+          <CUIAutoComplete
+            label="Choose drop-off locations"
+            placeholder="Type an area"
+            items={areas}
+            selectedItems={selectedItems}
+            onSelectedItemsChange={(changes) =>
+              handleSelectedItemsChange(changes.selectedItems)
+            }
+          />
+        </Stack>
+      </Box>
       {/* <Container>
         <Box as="form" mt={10}>
           <Select

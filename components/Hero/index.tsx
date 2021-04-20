@@ -69,11 +69,6 @@ export default function CallToActionWithVideo() {
               Your reliable logistics partner
             </Text>
           </Heading>
-          {/* <Text color="gray.500">
-            Logistico is a rich platform that lets you create and
-            manage every aspect of your logistics. We provide premium,
-            efficient and reliable pickup and delivery services.
-          </Text> */}
           <DispatchForm />
           <Stack
             spacing={{ base: 4, sm: 6 }}
@@ -96,7 +91,7 @@ export default function CallToActionWithVideo() {
               onClick={(e) => {
                 e.preventDefault()
                 if (typeof window !== 'undefined') {
-                  router.push('/createDelivery')
+                  router.push('/requestDispatch')
                 }
               }}
             >
