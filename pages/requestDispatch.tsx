@@ -20,7 +20,10 @@ import MainLayout from '../components/layouts/frontLayout/MainLayout'
 
 export default function requestDispatch() {
   const [tabIndex, setTabIndex] = useState(0)
-
+  // const [formData, setformData] = useState({})
+  // const onInputChange = () => {
+  //   setformData()
+  // }
   const handleNextButtonClick = (event) => {
     event.preventDefault()
     setTabIndex((currentIndex) => currentIndex + 1)
@@ -83,7 +86,7 @@ export default function requestDispatch() {
                     <Button
                       fontFamily="heading"
                       mt={8}
-                      w="sm"
+                      // w="sm"
                       bgGradient="linear(to-r, red.400,pink.400)"
                       color="white"
                       onClick={handleNextButtonClick}
