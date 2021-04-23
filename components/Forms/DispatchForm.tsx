@@ -39,6 +39,7 @@ export default function DispatchForm() {
       setSelectedItems(selectedItems)
     }
   }
+  const handleCreateItem = (item: Item) => ({ item })
   return (
     <>
       <Box shadow="md" borderWidth="1px" borderRadius="md" p={5}>
@@ -46,6 +47,8 @@ export default function DispatchForm() {
           <CUIAutoComplete
             label="Choose drop-off locations"
             placeholder="Type an area"
+            onCreateItem={handleCreateItem}
+            tagStyleProps={{ bg: 'green.300', color: 'white' }}
             items={areas}
             selectedItems={selectedItems}
             onSelectedItemsChange={(changes) =>
