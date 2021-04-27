@@ -1,11 +1,11 @@
 const areas = [
-  { value: 'dLine', label: 'DLine' },
-  { value: 'trans-amadi', label: 'Trans-Amadi' },
-  { value: 'ogbum-nu-abali', label: 'Ogbum-nu-abali' },
-  { value: 'peter-odili', label: 'Peter Odili' },
-  { value: 'new-g-r-a', label: 'New G.R.A' },
-  { value: 'old-g-r-a', label: 'Old G.R.A' },
-  { value: 'stadium-road', label: 'Stadium Road' },
+  { value: 'D-Line', label: 'D-Line' },
+  { value: 'Trans-Amadi Road', label: 'Trans-Amadi Road' },
+  { value: 'Ogbum-nu-abali Road', label: 'Ogbum-nu-abali Road' },
+  { value: 'Peter-Odili Road', label: 'Peter Odili Road' },
+  { value: 'New G.R.A', label: 'New G.R.A' },
+  { value: 'Old G.R.A', label: 'Old G.R.A' },
+  { value: 'Stadium Road', label: 'Stadium Road' },
 ]
 
 export default areas

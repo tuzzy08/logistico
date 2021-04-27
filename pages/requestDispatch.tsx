@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import { useForm} from 'react-hook-form'
 import {
   Box,
@@ -6,26 +6,41 @@ import {
   ButtonGroup,
   Divider,
   Container,
+  Tag,
   // Flex,
   Input,
+  HStack,
   Stack,
   Tabs,
   TabList,
   TabPanels,
   Tab,
   TabPanel,
+  Text,
   Textarea,
 } from '@chakra-ui/react'
 import { ArrowLeftIcon } from '@chakra-ui/icons'
 import MainLayout from '../components/layouts/frontLayout/MainLayout'
 
 export default function requestDispatch() {
+  let currentArea
+  let selectedAreas
   const [tabIndex, setTabIndex] = useState(0)
+  let isEmptyArray = false
   // const { register, handleSubmit } = useForm()
   // const [formData, setformData] = useState({})
   // const onInputChange = () => {
   //   setformData()
   // }
+  if (typeof window !== 'undefined') {
+    selectedAreas = JSON.parse(localStorage.getItem('areas'))
+  }
+  if (selectedAreas) {
+    isEmptyArray = false
+    currentArea = selectedAreas.shift()
+    console.log(currentArea)
+  }
+
   const handleNextButtonClick = (event) => {
     event.preventDefault()
     setTabIndex((currentIndex) => currentIndex + 1)
@@ -34,17 +49,32 @@ export default function requestDispatch() {
     event.preventDefault()
     setTabIndex((currentIndex) => currentIndex - 1)
   }
-
   const handleTabsChange = (index) => {
     setTabIndex(index)
   }
-
   return (
     <>
       <MainLayout>
         <Divider />
         <Container mt="70px" maxW="2xl">
-          <Stack borderRadius="md" borderWidth="1px" padding="7px">
+          <Stack
+            borderRadius="md"
+            borderWidth="1px"
+            padding="7px"
+            marginTop="25px"
+          >
+            {isEmptyArray ? (
+              <></>
+            ) : (
+              <>
+                <HStack spacing={4} mt="10px" padding="10px">
+                  <Text fontSize="sm">Current Location:</Text>
+                  <Tag size="md" variant="solid" colorScheme="teal">
+                    {currentArea}
+                  </Tag>
+                </HStack>
+              </>
+            )}
             <form>
               <Tabs
                 index={tabIndex}
@@ -63,7 +93,7 @@ export default function requestDispatch() {
                 <TabPanels>
                   <TabPanel>
                     {/* Sender Details */}
-                    <Box as="form" paddingTop="20px">
+                    <Box paddingTop="20px">
                       <Stack spacing={4}>
                         <Input
                           isRequired
@@ -105,7 +135,7 @@ export default function requestDispatch() {
                   </TabPanel>
                   <TabPanel>
                     {/* Item Details */}
-                    <Box as="form" paddingTop="20px">
+                    <Box paddingTop="20px">
                       <Stack spacing={4}>
                         <Input
                           isRequired
@@ -119,35 +149,6 @@ export default function requestDispatch() {
                         />
                         <Textarea placeholder="Description" />
                       </Stack>
-                      {/* <Stack direction="row" spacing={4}>
-                      <Button
-                        // variant="outline"
-                        colorScheme="pink"
-                        fontFamily="heading"
-                        mt={8}
-                        w="full"
-                        color="white"
-                        // onClick={handleNextButtonClick}
-                        leftIcon={<ArrowLeftIcon />}
-                      >
-                        Back
-                      </Button>
-                      <Button
-                        fontFamily="heading"
-                        mt={8}
-                        w="full"
-                        bgGradient="linear(to-r, red.400,pink.400)"
-                        color="white"
-                        onClick={handleNextButtonClick}
-                        _hover={{
-                          bgGradient:
-                            'linear(to-r, red.400,pink.400)',
-                          boxShadow: 'xl',
-                        }}
-                      >
-                        Next
-                      </Button>
-                    </Stack> */}
                       <ButtonGroup
                         variant="outline"
                         spacing="6"
@@ -178,7 +179,7 @@ export default function requestDispatch() {
                   </TabPanel>
                   <TabPanel>
                     {/* Receiver Details */}
-                    <Box as="form" paddingTop="20px">
+                    <Box paddingTop="20px">
                       <Stack spacing={4}>
                         <Input
                           isRequired
@@ -213,19 +214,40 @@ export default function requestDispatch() {
                         >
                           Back
                         </Button>
-                        <Button
-                          color="white"
-                          bgGradient="linear(to-r, red.400,pink.400)"
-                          // w="sm"
-                          // onClick={handleNextButtonClick}
-                          _hover={{
-                            bgGradient:
-                              'linear(to-r, red.400,pink.400)',
-                            boxShadow: 'xl',
-                          }}
-                        >
-                          Submit
-                        </Button>
+                        {isEmptyArray ? (
+                          <>
+                            <Button
+                              type="submit"
+                              color="white"
+                              bgGradient="linear(to-r, red.400,pink.400)"
+                              // w="sm"
+                              // onClick={handleNextButtonClick}
+                              _hover={{
+                                bgGradient:
+                                  'linear(to-r, red.400,pink.400)',
+                                boxShadow: 'xl',
+                              }}
+                            >
+                              Submit
+                            </Button>
+                          </>
+                        ) : (
+                          <>
+                            <Button
+                              color="white"
+                              bgGradient="linear(to-r, red.400,pink.400)"
+                              // w="sm"
+                              // onClick={handleNextButtonClick}
+                              _hover={{
+                                bgGradient:
+                                  'linear(to-r, red.400,pink.400)',
+                                boxShadow: 'xl',
+                              }}
+                            >
+                              Add Next Item
+                            </Button>
+                          </>
+                        )}
                       </ButtonGroup>
                     </Box>
                   </TabPanel>
