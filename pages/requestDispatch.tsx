@@ -18,11 +18,13 @@ import {
   TabPanel,
   Text,
   Textarea,
+  useToast,
 } from '@chakra-ui/react'
 import { ArrowLeftIcon } from '@chakra-ui/icons'
 import MainLayout from '../components/layouts/frontLayout/MainLayout'
 
 export default function requestDispatch() {
+  const toast = useToast()
   let currentArea
   let selectedAreas
   const [tabIndex, setTabIndex] = useState(0)
@@ -35,7 +37,7 @@ export default function requestDispatch() {
   if (typeof window !== 'undefined') {
     selectedAreas = JSON.parse(localStorage.getItem('areas'))
   }
-  if (selectedAreas) {
+  if (selectedAreas && selectedAreas.length > 1) {
     isEmptyArray = false
     currentArea = selectedAreas.shift()
   }
@@ -243,6 +245,17 @@ export default function requestDispatch() {
                                   'linear(to-r, red.400,pink.400)',
                                 boxShadow: 'xl',
                               }}
+                              onClick={() =>
+                                toast({
+                                  title: 'Dispatch created.',
+                                  description:
+                                    'A rider will contact you soon',
+                                  status: 'success',
+                                  duration: 5000,
+                                  isClosable: true,
+                                  variant: 'left-accent',
+                                })
+                              }
                             >
                               Add Next Item
                             </Button>

@@ -124,14 +124,17 @@ export default function CallToActionWithVideo() {
               onClick={(e) => {
                 e.preventDefault()
                 // eslint-disable-next-line array-callback-return
-                selectedItems.map((item) => {
-                  const { value } = item
-                  selectAreas.push(value)
-                })
-                localStorage.setItem(
-                  'areas',
-                  JSON.stringify(selectAreas),
-                )
+                if (selectedItems.length > 1) {
+                  // eslint-disable-next-line array-callback-return
+                  selectedItems.map((item) => {
+                    const { value } = item
+                    selectAreas.push(value)
+                  })
+                  localStorage.setItem(
+                    'areas',
+                    JSON.stringify(selectAreas),
+                  )
+                }
                 if (typeof window !== 'undefined') {
                   router.push('/requestDispatch')
                 }
