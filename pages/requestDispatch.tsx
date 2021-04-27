@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 // import { useForm} from 'react-hook-form'
 import {
   Box,
@@ -26,7 +26,7 @@ export default function requestDispatch() {
   let currentArea
   let selectedAreas
   const [tabIndex, setTabIndex] = useState(0)
-  let isEmptyArray = false
+  let isEmptyArray = true
   // const { register, handleSubmit } = useForm()
   // const [formData, setformData] = useState({})
   // const onInputChange = () => {
@@ -38,8 +38,8 @@ export default function requestDispatch() {
   if (selectedAreas) {
     isEmptyArray = false
     currentArea = selectedAreas.shift()
-    console.log(currentArea)
   }
+  console.log(currentArea)
 
   const handleNextButtonClick = (event) => {
     event.preventDefault()
@@ -60,7 +60,7 @@ export default function requestDispatch() {
           <Stack
             borderRadius="md"
             borderWidth="1px"
-            padding="7px"
+            padding="20px"
             marginTop="25px"
           >
             {isEmptyArray ? (
